@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class coin : MonoBehaviour {
+	public int _Points;
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{

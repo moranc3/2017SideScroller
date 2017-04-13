@@ -8,6 +8,7 @@ public class player : MonoBehaviour {
 	public float speed = 5;
 	public float jumpSpeed = 5;
 	public float deadZone = -4;
+	public bool canfly = false;
 
 	new Rigidbody2D rigidbody; 
 	GM _GM; 
@@ -28,7 +29,7 @@ public class player : MonoBehaviour {
 		Vector2 v = rigidbody.velocity;
 		v.x = x * speed;
 
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetButtonDown ("Jump") && (v.y == 0 || canfly) ) {
 			v.y = jumpSpeed;
 		}
 

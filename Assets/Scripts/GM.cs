@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class GM : MonoBehaviour {
 	private int _Lives = 3; 
-	private int _Points;
+	public int _Points;
 
 	public Text livesValue;
 	public Text pointsValue;
